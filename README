@@ -1,0 +1,17 @@
+This toy application involves using the pika library to talk to a RabbitMQ broker, with the task of building a web application.
+
+The web framework is CherryPy, and it utilized Spring Python (http://springpython.webfactional.com) to do various things like
+implement security.
+
+The assumption is you are using some sort of virtualenv setup like this:
+
+% virtualenv sp --no-site-packages
+
+From this, it is recommended to download and install Spring Python (see web site for where to get the bundle), along with
+installing CherryPy and pika.
+
+After that, to run it:
+
+% python twitter_clone.py
+
+Unfortunately, the polling thread blocks, so to kill it, you must background it then kill the job.
